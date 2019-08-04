@@ -8451,15 +8451,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11233,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11676,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11715,7 +11715,7 @@ ul.typeahead-list > li > a {
 
     </style>
 <style type="text/css">
-    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when 
+    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when
 a notebook is open. this rule won't be applied when the notebook is not open (in 404 view for example) */
 body[data-notebook-name] #menubar-container #maintoolbar:not(.show-panel),
 body[data-notebook-name] #menubar-container ul.navbar-nav:not(.show-panel) {
@@ -11749,14 +11749,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11971,7 +11971,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># install relevant packages</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># install ggplot2 package</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 
 <span class="c1"># define core variable names in separate matrix</span>
@@ -12002,9 +12002,9 @@ div#notebook {
 <span class="nf">by</span><span class="p">(</span><span class="n">bshare</span><span class="o">$</span><span class="n">User.Type</span><span class="p">,</span> <span class="n">bshare</span><span class="o">$</span><span class="n">City</span><span class="p">,</span> <span class="n">summary</span><span class="p">)</span>
 
 <span class="c1"># second, plot a bar chart, removing &#39;dependent&#39; counts and those without a user type </span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">)</span> <span class="o">+</span> 
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">geom_bar</span><span class="p">(</span><span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">User.Type</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s">&#39;#F79420&#39;</span><span class="p">)</span> <span class="o">+</span>
-  <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">City</span><span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">City</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;Bar chart of trips made, split by user type and city&#39;</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;User types by city&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&#39;Number of trips&#39;</span><span class="p">)</span>
 
@@ -12012,10 +12012,10 @@ div#notebook {
 <span class="c1"># insight: Washington has the highest number of trips made by customers</span>
 
 <span class="c1"># third, make stacked bars the same height to make it easy to compare proportions across cities</span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="p">)</span> <span class="o">+</span> 
-  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> 
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span>
     <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">City</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">User.Type</span><span class="p">),</span>
-    <span class="n">position</span> <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">position</span> <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;100% stacked bar chart of trips made, split by user type and city&#39;</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;City&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&#39;Proportion of trips&#39;</span><span class="p">)</span>
 
@@ -12023,18 +12023,18 @@ div#notebook {
 <span class="c1"># insight: Washington has highest proportion of trips made by customers </span>
 
 <span class="c1"># fourth, look at difference in travel duration between customers and subscribers, dividing trip duration by 60 so in minutes </span>
-<span class="nf">by</span><span class="p">(</span><span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="o">$</span><span class="n">Trip.Duration</span><span class="o">/</span><span class="m">60</span><span class="p">,</span> 
-   <span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="o">$</span><span class="n">User.Type</span><span class="p">,</span> 
+<span class="nf">by</span><span class="p">(</span><span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="o">$</span><span class="n">Trip.Duration</span><span class="o">/</span><span class="m">60</span><span class="p">,</span>
+   <span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="o">$</span><span class="n">User.Type</span><span class="p">,</span>
    <span class="n">summary</span><span class="p">)</span>
 
 <span class="c1"># use a box plot to look at difference in distribution using coord_cartesian to set the y limits and focus on the middle 50% rather than outliers</span>
-<span class="nf">qplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">User.Type</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Trip.Duration</span><span class="o">/</span><span class="m">60</span><span class="p">,</span> 
-      <span class="n">data</span> <span class="o">=</span> <span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="p">,</span> 
+<span class="nf">qplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">User.Type</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Trip.Duration</span><span class="o">/</span><span class="m">60</span><span class="p">,</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="n">bshare[bshare</span><span class="o">$</span><span class="n">User.Type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Customer&quot;</span><span class="p">,</span><span class="s">&quot;Subscriber&quot;</span><span class="p">),</span><span class="n">]</span><span class="p">,</span>
       <span class="n">geom</span> <span class="o">=</span> <span class="s">&#39;boxplot&#39;</span><span class="p">,</span>
       <span class="n">color</span> <span class="o">=</span> <span class="nf">I</span><span class="p">(</span><span class="s">&#39;black&#39;</span><span class="p">),</span>
       <span class="n">fill</span> <span class="o">=</span> <span class="nf">I</span><span class="p">(</span><span class="s">&#39;#F79420&#39;</span><span class="p">))</span> <span class="o">+</span>
       <span class="nf">coord_cartesian</span><span class="p">(</span><span class="n">ylim</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">90</span><span class="p">))</span> <span class="o">+</span>
-      <span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Box plots examining distribution for trip duration split by main user type&quot;</span><span class="p">,</span> 
+      <span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Box plots examining distribution for trip duration split by main user type&quot;</span><span class="p">,</span>
       <span class="n">x</span><span class="o">=</span><span class="s">&quot;User Type&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">&quot;Trip duration in minutes&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -12055,15 +12055,15 @@ div#notebook {
 
 <div class="output_text output_subarea ">
 <pre>bshare$City: NY
-             Customer Subscriber 
-       119       5558      49093 
------------------------------------------------------------- 
+             Customer Subscriber
+       119       5558      49093
+------------------------------------------------------------
 bshare$City: WASH
-             Customer Subscriber 
-         1      23450      65600 
------------------------------------------------------------- 
+             Customer Subscriber
+         1      23450      65600
+------------------------------------------------------------
 bshare$City: CHI
-             Customer Subscriber 
+             Customer Subscriber
          1       1746       6883 </pre>
 </div>
 
@@ -12521,15 +12521,15 @@ AAAASUVORK5CYII="
 
 
 <div class="output_text output_subarea ">
-<pre>bshare[bshare$User.Type %in% c(&#34;Customer&#34;, &#34;Subscriber&#34;), ]$User.Type: 
+<pre>bshare[bshare$User.Type %in% c(&#34;Customer&#34;, &#34;Subscriber&#34;), ]$User.Type:
 NULL
------------------------------------------------------------- 
+------------------------------------------------------------
 bshare[bshare$User.Type %in% c(&#34;Customer&#34;, &#34;Subscriber&#34;), ]$User.Type: Customer
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-    1.022    15.257    24.167    41.911    40.076 18143.900 
------------------------------------------------------------- 
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    1.022    15.257    24.167    41.911    40.076 18143.900
+------------------------------------------------------------
 bshare[bshare$User.Type %in% c(&#34;Customer&#34;, &#34;Subscriber&#34;), ]$User.Type: Subscriber
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
    1.000    5.869    9.459   12.325   15.245 2833.882 </pre>
 </div>
 
@@ -13562,9 +13562,9 @@ wg4AAEAShB0AAIAkCDsAAABJEHYAAACS+D+R1iYXd/L3RQAAAABJRU5ErkJggg=="
 
 <span class="c1"># one, plot frequency graphs to see distribution split between different cities, converting seconds to minutes and zooming in since many extreme values  </span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="nf">subset</span><span class="p">(</span><span class="n">bshare</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">Trip.Duration</span><span class="p">)),</span> <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Trip.Duration</span><span class="o">/</span><span class="m">60</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">City</span><span class="p">))</span> <span class="o">+</span>
-  <span class="nf">geom_freqpoly</span><span class="p">(</span><span class="n">binwidth</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span> 
-  <span class="nf">coord_cartesian</span><span class="p">(</span><span class="n">xlim</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">180</span><span class="p">))</span> <span class="o">+</span> 
-  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Frequency polygons examining the distribution for trip duration, split by main user type&quot;</span><span class="p">,</span> 
+  <span class="nf">geom_freqpoly</span><span class="p">(</span><span class="n">binwidth</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">coord_cartesian</span><span class="p">(</span><span class="n">xlim</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">180</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Frequency polygons examining the distribution for trip duration, split by main user type&quot;</span><span class="p">,</span>
        <span class="n">x</span><span class="o">=</span><span class="s">&quot;Trip duration in minutes&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">&quot;Frequency&quot;</span><span class="p">)</span>
 
 <span class="c1">#insight: NY has more of a high peak than the other cities, but all 3 have the same right-skewed distribution meaning most trips have shorter durations but there is a long right tail and many outliers.</span>
@@ -13586,7 +13586,7 @@ wg4AAEAShB0AAIAkCDsAAABJEHYAAACS+D+R1iYXd/L3RQAAAABJRU5ErkJggg=="
 <span class="nf">for </span><span class="p">(</span><span class="n">num</span> <span class="n">in</span> <span class="nf">subset</span><span class="p">(</span><span class="n">bshare</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">Trip.Duration</span><span class="p">))</span><span class="o">$</span><span class="n">Trip.Duration</span><span class="p">){</span>
   <span class="nf">if </span><span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="n">caps[1]</span><span class="p">){</span>
     <span class="n">bshare</span><span class="o">$</span><span class="n">Trip.Duration[idx]</span> <span class="o">=</span> <span class="n">caps[1]</span>
-  <span class="p">}</span> 
+  <span class="p">}</span>
   <span class="n">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="n">caps[2]</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">bshare</span><span class="o">$</span><span class="n">Trip.Duration[idx]</span> <span class="o">=</span> <span class="n">caps[2]</span>
   <span class="p">}</span>
@@ -13616,15 +13616,15 @@ wg4AAEAShB0AAIAkCDsAAABJEHYAAACS+D+R1iYXd/L3RQAAAABJRU5ErkJggg=="
 
 <div class="output_text output_subarea ">
 <pre>bshare$City: NY
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s 
-    1.017     6.133    10.167    15.060    17.517 18143.900         1 
------------------------------------------------------------- 
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s
+    1.017     6.133    10.167    15.060    17.517 18143.900         1
+------------------------------------------------------------
 bshare$City: WASH
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s 
-    1.005     6.848    11.783    20.566    20.554 15076.523         1 
------------------------------------------------------------- 
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s
+    1.005     6.848    11.783    20.566    20.554 15076.523         1
+------------------------------------------------------------
 bshare$City: CHI
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
    1.000    6.571   11.167   15.620   18.650 1423.467 </pre>
 </div>
 
@@ -13639,15 +13639,15 @@ bshare$City: CHI
 
 <div class="output_text output_subarea ">
 <pre>bshare$City: NY
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-  1.967   6.133  10.167  12.726  17.517  31.955       1 
------------------------------------------------------------- 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s
+  1.967   6.133  10.167  12.726  17.517  31.955       1
+------------------------------------------------------------
 bshare$City: WASH
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s 
-    1.005     7.254    13.343    21.822    26.629 15076.523         1 
------------------------------------------------------------- 
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s
+    1.005     7.254    13.343    21.822    26.629 15076.523         1
+------------------------------------------------------------
 bshare$City: CHI
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    1.00    6.75   11.83   16.56   20.82 1423.47 </pre>
 </div>
 
@@ -14617,14 +14617,14 @@ AAAAAElFTkSuQmCC"
 
 <span class="c1"># months</span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">bshare</span><span class="p">)</span> <span class="o">+</span>
-  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Month</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s">&#39;#F79420&#39;</span><span class="p">)</span> <span class="o">+</span> 
-  <span class="nf">facet_wrap</span><span class="p">(</span><span class="n">bshare</span><span class="o">$</span><span class="n">City</span><span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Month</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s">&#39;#F79420&#39;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="n">bshare</span><span class="o">$</span><span class="n">City</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;Bar charts of trips made, split by month and city&#39;</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;Month, by city&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&#39;Number of trips&#39;</span><span class="p">)</span>
 
 <span class="c1"># days</span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">bshare</span><span class="p">)</span> <span class="o">+</span>
-  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">WDay</span><span class="p">),</span><span class="n">color</span> <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s">&#39;#F79420&#39;</span><span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">WDay</span><span class="p">),</span><span class="n">color</span> <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s">&#39;#F79420&#39;</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">facet_wrap</span><span class="p">(</span><span class="n">bshare</span><span class="o">$</span><span class="n">City</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;Bar charts of trips made, split by day of the week and city&#39;</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;Day of the week, by city&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&#39;Number of trips&#39;</span><span class="p">)</span>
@@ -14649,10 +14649,10 @@ AAAAAElFTkSuQmCC"
 <span class="n">bshare</span><span class="o">$</span><span class="n">WDayFlag[bshare</span><span class="o">$</span><span class="n">WDay</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Mon&quot;</span><span class="p">,</span><span class="s">&quot;Tue&quot;</span><span class="p">,</span><span class="s">&quot;Wed&quot;</span><span class="p">,</span><span class="s">&quot;Thu&quot;</span><span class="p">,</span><span class="s">&quot;Fri&quot;</span><span class="p">)</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Weekday&quot;</span>
 
 <span class="c1"># five, plot frequency graphs to see distribution split between Weekend/Weekday</span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="nf">subset</span><span class="p">(</span><span class="n">bshare</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">Trip.Duration</span><span class="p">)),</span> <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">subset</span><span class="p">(</span><span class="n">bshare</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">Trip.Duration</span><span class="p">))</span><span class="o">$</span><span class="n">Trip.Duration</span><span class="o">/</span><span class="m">60</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">WDayFlag</span><span class="p">))</span> <span class="o">+</span> 
-  <span class="nf">geom_freqpoly</span><span class="p">(</span><span class="n">binwidth</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span> 
-  <span class="nf">coord_cartesian</span><span class="p">(</span><span class="n">xlim</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">60</span><span class="p">))</span> <span class="o">+</span> 
-  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Frequency polygons examining the distribution for trip duration, split Weekend/Weekday&quot;</span><span class="p">,</span> 
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="nf">subset</span><span class="p">(</span><span class="n">bshare</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">Trip.Duration</span><span class="p">)),</span> <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">subset</span><span class="p">(</span><span class="n">bshare</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">Trip.Duration</span><span class="p">))</span><span class="o">$</span><span class="n">Trip.Duration</span><span class="o">/</span><span class="m">60</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">WDayFlag</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_freqpoly</span><span class="p">(</span><span class="n">binwidth</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">coord_cartesian</span><span class="p">(</span><span class="n">xlim</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">60</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Frequency polygons examining the distribution for trip duration, split Weekend/Weekday&quot;</span><span class="p">,</span>
        <span class="n">x</span><span class="o">=</span><span class="s">&quot;Trip duration in minutes&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">&quot;Frequency&quot;</span><span class="p">)</span>
 
 <span class="c1"># insight: the distribution for weekdays has more of a high peak, whereas the distribution for weekend rides is not as extreme (though still right tailed)</span>
@@ -15223,31 +15223,31 @@ QmCC"
 
 <div class="output_text output_subarea ">
 <pre>bshare$WDay: Fri
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-    1.017     6.307    10.583    17.410    18.175 11278.112 
------------------------------------------------------------- 
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    1.017     6.307    10.583    17.410    18.175 11278.112
+------------------------------------------------------------
 bshare$WDay: Mon
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-   1.014    6.320   10.600   16.441   18.133 2401.714 
------------------------------------------------------------- 
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+   1.014    6.320   10.600   16.441   18.133 2401.714
+------------------------------------------------------------
 bshare$WDay: Sat
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-   1.032    7.483   13.893   24.082   25.040 7437.117 
------------------------------------------------------------- 
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+   1.032    7.483   13.893   24.082   25.040 7437.117
+------------------------------------------------------------
 bshare$WDay: Sun
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s 
-    1.000     7.433    13.791    24.830    24.688 18143.900         1 
------------------------------------------------------------- 
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s
+    1.000     7.433    13.791    24.830    24.688 18143.900         1
+------------------------------------------------------------
 bshare$WDay: Thu
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-   1.020    6.317   10.300   15.617   17.250 2902.733 
------------------------------------------------------------- 
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+   1.020    6.317   10.300   15.617   17.250 2902.733
+------------------------------------------------------------
 bshare$WDay: Tue
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-    1.000     6.293    10.542    16.629    17.317 15076.523 
------------------------------------------------------------- 
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    1.000     6.293    10.542    16.629    17.317 15076.523
+------------------------------------------------------------
 bshare$WDay: Wed
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
    1.028    6.343   10.466   15.143   17.317 1844.133 </pre>
 </div>
 
@@ -16768,7 +16768,7 @@ AsEOAAAAIEYg2AEAAADECAQ7AAAAgBjx/wHJ/A9Uw/4LuQAAAABJRU5ErkJggg=="
   </div>
 </body>
 
- 
+
 
 
 </html>
