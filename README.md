@@ -15,3 +15,5 @@ Sarah Cross
 
 With the help of:
 > Udacity
+
+:mountain_bicyclist: :mountain_bicyclist: :mountain_bicyclist: :mountain_bicyclist:
